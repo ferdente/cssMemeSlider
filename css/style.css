@@ -5,28 +5,23 @@
 }
 /*-------------------- обнуление */
 
-
 body{
     background-color: wheat ;
 }
 
 .wrap{
-    max-width: 60vw;
-    max-height: 60vh;
-    margin: auto;
+    max-width: 50vw;
+    margin: 3vh auto;
 }
 
-.slider, .txwa{
+.slider{
     max-width: 60vw;
-    max-height: 60vh;
     overflow: hidden;
     margin: auto;
 }
 
-
 .navigation{
     display: flex;
-    justify-content: end;
 }
 
 .bar{
@@ -41,6 +36,12 @@ body{
 }
 
 .bar:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.bar:checked{
+    color: gold;
     opacity: 1;
     transform: scale(1.1);
 }
@@ -66,36 +67,59 @@ input[name="rad"]{
     height: 100%;
 }
 
-#r1:checked ~ .s1{
+
+#r1:checked ~ .middle .s1{
     margin-left: 0;
 }
-#r2:checked ~ .s1{ 
+#r2:checked ~ .middle .s1{
     margin-left: -25%;
 }
-#r3:checked ~ .s1{
+#r3:checked ~ .middle .s1{
     margin-left: -50%;
 }
-#r4:checked ~ .s1{
+#r4:checked ~ .middle .s1{
     margin-left: -75%;
+}
+
+
+#r1:checked ~ .wraptext .s2{
+    margin-left: 0;
+}
+#r2:checked ~ .wraptext .s2{
+    margin-left: -25%;
+}
+#r3:checked ~ .wraptext .s2{
+    margin-left: -50%;
+}
+#r4:checked ~ .wraptext .s2{
+    margin-left: -75%;
+}
+
+
+#r1:checked ~ .wraptext .b1{
+    background-color: black;
+}
+#r2:checked ~ .wraptext .b2{
+    background-color: black;
+}
+#r3:checked ~ .wraptext .b3{
+    background-color: black;
+}
+#r4:checked ~ .wraptext .b4{
+    background-color: black;
 }
 
 
 .wraptext{
+    margin-top: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-#r1:checked ~ .wraptext .txwa .textwrap .s2{
-    margin-left: 0;
-}
-#r2:checked ~  .wraptext .txwa .textwrap .s2{
-    margin-left: -25%;
-}
-#r3:checked ~  .wraptext .txwa .textwrap .s2{
-    margin-left: -50%;
-}
-#r4:checked ~  .wraptext .txwa .textwrap .s2{
-    margin-left: -75%;
+.txwa{
+    max-width: 10vw;
+    max-height: 10vh;
+    overflow: hidden;
 }
 
