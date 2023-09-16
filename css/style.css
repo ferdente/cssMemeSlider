@@ -40,10 +40,8 @@ body{
     transform: scale(1.1);
 }
 
-.bar:checked{
-    color: gold;
-    opacity: 1;
-    transform: scale(1.1);
+.bar:active{
+ background-color: blue;
 }
 
 input[name="rad"]{
@@ -109,7 +107,6 @@ input[name="rad"]{
     background-color: black;
 }
 
-
 .wraptext{
     margin-top: 1em;
     display: flex;
@@ -138,7 +135,6 @@ input[name="rad"]{
         overflow: hidden;
     }
 }
-
 
 @media screen and (max-width: 365px) {
     .slide p{
