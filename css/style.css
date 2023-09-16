@@ -1,40 +1,101 @@
 /*-------------------- начало обнуление */
-
 *{
 	padding: 0;
 	margin: 0;
-	border: 0;
 }
-*, *:before, *:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-:focus, :active{outline: none;}
-a:focus, a:active{outline: none;}
-
-nav,footer,header,aside{display: block;}
-
-html, body{
-	height: 100%;
-	width: 100%;
-	font-style: 100%;
-	line-height: 1;
-	font-style: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-
-input, button, textarea{font-family: inherit;}
-
-input::-ms-clear{display:none;}
-button{cursor: pointer;}
-button::-moz-focus-inner{padding: 0;border: 0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style-type: none;}
-img{vertical-align: top;}
-
-h1,h2, h3, h4, h5, h6{font-style: inherit; font-weight: 400;}
 /*-------------------- обнуление */
+
+
+body{
+    background-color: wheat ;
+}
+
+.wrap{
+    max-width: 60vw;
+    max-height: 60vh;
+    margin: auto;
+}
+
+.slider, .txwa{
+    max-width: 60vw;
+    max-height: 60vh;
+    overflow: hidden;
+    margin: auto;
+}
+
+
+.navigation{
+    display: flex;
+    justify-content: end;
+}
+
+.bar{
+    width: 2em;
+    height: 1em;
+    cursor: pointer;
+    background-color: brown;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all .4s ease;
+    margin: .3em;
+}
+
+.bar:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[name="rad"]{
+    display: none;
+}
+
+
+.slides, .textwrap{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 25%;
+    transition: all .6s ease;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{ 
+    margin-left: -25%;
+}
+#r3:checked ~ .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .s1{
+    margin-left: -75%;
+}
+
+
+.wraptext{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#r1:checked ~ .wraptext .txwa .textwrap .s2{
+    margin-left: 0;
+}
+#r2:checked ~  .wraptext .txwa .textwrap .s2{
+    margin-left: -25%;
+}
+#r3:checked ~  .wraptext .txwa .textwrap .s2{
+    margin-left: -50%;
+}
+#r4:checked ~  .wraptext .txwa .textwrap .s2{
+    margin-left: -75%;
+}
+
