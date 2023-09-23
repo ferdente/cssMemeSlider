@@ -1,0 +1,143 @@
+/*-------------------- начало обнуление */
+*{
+	padding: 0;
+	margin: 0;
+}
+/*-------------------- обнуление */
+
+body{
+    background-color: wheat ;
+}
+
+.wrap{
+    max-width: 50vw;
+    margin: 1% auto;
+}
+
+.slider{
+    max-width: 60vw;
+    overflow: hidden;
+    margin: auto;
+}
+
+.navigation{
+    display: flex;
+}
+
+.bar{
+    width: 2em;
+    height: 1em;
+    cursor: pointer;
+    background-color: brown;
+    opacity: .5;
+    border-radius: 0.3em;
+    transition: all .4s ease;
+    margin: .3em;
+}
+
+.bar:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.bar:active{
+ background-color: blue;
+}
+
+input[name="rad"]{
+    display: none;
+}
+
+
+.slides, .textwrap{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 25%;
+    transition: all .6s ease;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#r1:checked ~ .middle .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .middle .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .middle .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .middle .s1{
+    margin-left: -75%;
+}
+
+
+#r1:checked ~ .wraptext .s2{
+    margin-left: 0;
+}
+#r2:checked ~ .wraptext .s2{
+    margin-left: -25%;
+}
+#r3:checked ~ .wraptext .s2{
+    margin-left: -50%;
+}
+#r4:checked ~ .wraptext .s2{
+    margin-left: -75%;
+}
+
+
+#r1:checked ~ .wraptext .b1{
+    background-color: black;
+}
+#r2:checked ~ .wraptext .b2{
+    background-color: black;
+}
+#r3:checked ~ .wraptext .b3{
+    background-color: black;
+}
+#r4:checked ~ .wraptext .b4{
+    background-color: black;
+}
+
+.wraptext{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txwa{
+    max-width: 25vw;
+    max-height: 10vh;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .wraptext{
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+    .navigation{
+        justify-content: center;
+    }
+    .txwa{
+        max-width: 50vw;
+        max-height: 10vh;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .slide p{
+        font-size: 0.8rem;
+    }
+}

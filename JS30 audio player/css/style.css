@@ -1,0 +1,87 @@
+/*-------------------- начало обнуление */
+*{
+	padding: 0;
+	margin: 0;
+}
+/*-------------------- обнуление */
+
+.audio-player{
+  margin: 10em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 330px;
+  background-color: pink;
+  z-index: 1;
+}
+
+
+.img_track img{
+  background-color: black;
+  width: 330px;
+  height: 330px;
+}
+
+.controls{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.toggle-play {
+  width: 30px;
+  height: 30px;
+}
+
+.play-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.play-container img{
+  width: 30px;
+  height: 30px;
+}
+
+
+.time{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.timeline {
+  background: white;
+  height: 5px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 2px 10px 0 #0008;
+  .progress {
+    background: coral;
+    width: 0%;
+    height: 100%;
+    transition: 0.25s;
+  }
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.git img{
+  width: 2em;
+  height: 2em;
+}
+
+.rs img{
+  width: 4em;
+  height: 4em;
+}
